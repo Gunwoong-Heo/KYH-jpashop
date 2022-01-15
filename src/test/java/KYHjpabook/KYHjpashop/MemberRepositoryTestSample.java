@@ -1,6 +1,7 @@
 package KYHjpabook.KYHjpashop;
 
 import KYHjpabook.KYHjpashop.domain.Member;
+import KYHjpabook.KYHjpashop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 // 하지만 이미 `@SpringBootTest` 에는 `@ExtendWith(SpringExtension.class)`가 포함되어 있다. 그래서 생략 가능  [https://www.whiteship.me/springboot-no-more-runwith/]
 //@ExtendWith(SpringExtension.class)
 @SpringBootTest
-class MemberRepositoryTest {
+class MemberRepositoryTestSample {
 
     @Autowired
     MemberRepository memberRepository;
@@ -23,6 +24,8 @@ class MemberRepositoryTest {
     @Transactional
     @Rollback(false)
     public void testMember() throws Exception {
+
+/*
         // given
         Member member = new Member();
         member.setName("memberA");
@@ -37,5 +40,7 @@ class MemberRepositoryTest {
         Assertions.assertThat(findMember).isEqualTo(member);  // findMember == member
         // 같은 transaction 안에서 저장을하고 조회를 하면, 영속성 컨텍스트가 같다. 같은 영속성 컨텍스트 안에서는 id값이 같으면 같은 객체임을 보장한다. 영속성 컨텍스트에서 객체를 반환한 것(따라서 select문도 나가지 않음)
         System.out.println("findMember == member = " + (findMember == member));
+*/
+
     }
 }
