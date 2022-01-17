@@ -23,6 +23,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 //	implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:${version}")
 	implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.0")  // 이런 외부 라이브러리들은 개발 단계에서는 좋으나, 운영 단계에서는 반드시 성능 테스트를 해보아야 한다.
 	compileOnly 'org.projectlombok:lombok'
