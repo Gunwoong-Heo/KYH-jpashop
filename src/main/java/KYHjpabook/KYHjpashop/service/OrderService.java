@@ -8,9 +8,12 @@ import KYHjpabook.KYHjpashop.domain.item.Item;
 import KYHjpabook.KYHjpashop.repository.ItemRepository;
 import KYHjpabook.KYHjpashop.repository.MemberRepository;
 import KYHjpabook.KYHjpashop.repository.OrderRepository;
+import KYHjpabook.KYHjpashop.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -74,4 +77,7 @@ public class OrderService {
     /**
      * 검색
      */
+    public List<Order> findOrders (OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
+    }
 }
