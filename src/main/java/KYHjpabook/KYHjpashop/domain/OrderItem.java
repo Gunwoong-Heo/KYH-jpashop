@@ -1,6 +1,7 @@
 package KYHjpabook.KYHjpashop.domain;
 
 import KYHjpabook.KYHjpashop.domain.item.Item;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
+    @JsonIgnore  // ordersV1()
     private Order order;
 
     private int orderPrice;  // 주문 가격

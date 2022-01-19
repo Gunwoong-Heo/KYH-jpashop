@@ -1,6 +1,7 @@
 package KYHjpabook.KYHjpashop.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ public class Delivery {
     private Long id;
 
     @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
+    @JsonIgnore  // ordersV1()
     private Order order;
 
     @Embedded
