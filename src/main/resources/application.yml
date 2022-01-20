@@ -12,6 +12,7 @@ spring:
       hibernate:
 #        show_sql: true   # sout으로 찍힘
         format_sql: true
+        default_batch_fetch_size: 100   # `in (?,?,..) 쿼리`에서 `?` 인자의 갯수   # Global하게 적용됨. local적으로 적용시키고 싶으면 엔티티의 필드에 `@BatchSize()` 를 적용하면 됨
 
 logging:
   level:
