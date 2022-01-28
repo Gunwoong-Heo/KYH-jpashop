@@ -1,4 +1,4 @@
-package KYHjpabook.KYHjpashop.Controller;
+package KYHjpabook.KYHjpashop.controller;
 
 import KYHjpabook.KYHjpashop.domain.Address;
 import KYHjpabook.KYHjpashop.domain.Member;
